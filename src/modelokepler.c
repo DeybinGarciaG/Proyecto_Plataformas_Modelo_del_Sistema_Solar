@@ -5,6 +5,19 @@
 #include "../structures.h"
 
 #define PI 3.14159265358979323846
+
+/**
+ * @brief Simula el modelo de Kepler para objetos y consultas dados.
+ *
+ * La función simula el modelo de Kepler utilizando los datos de los objetos y las consultas
+ * proporcionados. Calcula la posición del objeto en el tiempo especificado por cada consulta
+ * y escribe los resultados en el archivo "respuestas.txt".
+ *
+ * @param objects Arreglo de estructuras ObjectDescription que contiene los objetos.
+ * @param numObjects Número de objetos en el arreglo.
+ * @param queries Arreglo de estructuras Query que contiene las consultas.
+ * @param numQueries Número de consultas en el arreglo.
+ */
 void simulateKepler(ObjectDescription* objects, int numObjects, Query* queries, int numQueries) {
     FILE* file = fopen("respuestas.txt", "w");
     if (file == NULL) {
@@ -76,6 +89,7 @@ int main() {
 
     // Hacer uso de los datos almacenados en las estructuras objects y queries
     simulateKepler(objects, numObjects, queries, numQueries);
+    
     // Liberar memoria dinámica
     free(objects);
     free(queries);

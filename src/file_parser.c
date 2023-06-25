@@ -4,6 +4,18 @@
 #include <string.h>
 #include <math.h>
 
+/**
+ * @brief Parsea un archivo de texto con información de objetos y consultas.
+ *
+ * La función lee el archivo de texto especificado por `filename` y extrae la información
+ * para almacenarla en las estructuras `ObjectDescription` y `Query`.
+ *
+ * @param filename Nombre del archivo de texto a parsear.
+ * @param objects Puntero al arreglo de estructuras ObjectDescription donde se almacenarán los objetos.
+ * @param numObjects Puntero al entero que almacenará el número de objetos encontrados.
+ * @param queries Puntero al arreglo de estructuras Query donde se almacenarán las consultas.
+ * @param numQueries Puntero al entero que almacenará el número de consultas encontradas.
+ */
 void parseFile(const char* filename, ObjectDescription** objects, int* numObjects, Query** queries, int* numQueries) {
     FILE* file = fopen(filename, "r");
     if (file == NULL) {
