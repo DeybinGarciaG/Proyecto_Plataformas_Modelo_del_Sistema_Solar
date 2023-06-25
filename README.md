@@ -1,7 +1,8 @@
 # Proyecto_Plataformas_Modelo_del_Sistema_Solar
 # Modelo del Sistema Solar 4
 
-**Estudiante:** [Nombre del estudiante]
+**Estudiante:** [Deybin Garcia Garcia]
+**Carnet:** [B93171]
 
 ## Índice
 - [Introducción](#introducción)
