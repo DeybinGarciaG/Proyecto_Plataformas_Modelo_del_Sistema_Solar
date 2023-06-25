@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#include "structures.h"
+#include "../structures.h"
 
 #define PI 3.14159265358979323846
 void simulateKepler(ObjectDescription* objects, int numObjects, Query* queries, int numQueries) {

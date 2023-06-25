@@ -18,7 +18,7 @@ all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJS) $(MAIN_OBJ)
 	@mkdir -p $(BIN_DIR)
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CC) $(LDFLAGS) $^ -o $@ -lm
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(BUILD_DIR)
