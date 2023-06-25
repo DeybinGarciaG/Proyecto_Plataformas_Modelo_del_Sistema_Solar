@@ -33,14 +33,61 @@ Como parte del repositorio en GitHub, crearemos un archivo README en el nivel ra
 Con nuestro enfoque dedicado y siguiendo estrictamente las especificaciones proporcionadas, esperamos cumplir con todos los requisitos del proyecto y entregar un programa funcional, bien estructurado y documentado que sea capaz de simular un sistema solar y responder de manera precisa a las consultas planteadas.
 
 ## Trasfondo
-En el contexto de este programa, se utilizó [explicar brevemente el contexto en el que se desarrolló el programa y los modelos utilizados para generar las órbitas].
+El programa consta de tres archivos: structures.h, file_parser.c y modelokepler.c. Analicemos cada uno de ellos para comprender el contexto y los modelos utilizados.
+
+En el archivo structures.h, se definen dos estructuras: ObjectDescription y Query. La estructura ObjectDescription representa la descripción de un objeto en el sistema solar, con sus características como el ID del objeto, la masa, las coordenadas del perihelio y afelio, y las coordenadas iniciales en el plano espacial. La estructura Query se utiliza para representar una consulta específica, con su ID de consulta, el ID del objeto consultado y el tiempo transcurrido desde el inicio de la simulación. Estas estructuras proporcionan una forma organizada de almacenar y manipular los datos necesarios para el programa.
+
+En el archivo file_parser.c, se encuentra la implementación de la función parseFile. Esta función se encarga de analizar un archivo de configuración y extraer la información relevante para la simulación del sistema solar. Utiliza la estructura de datos ObjectDescription y Query para almacenar los objetos y las consultas respectivamente. El archivo de configuración se divide en dos secciones delimitadas por "[descripcion]" y "[consultas]". En cada sección, se lee y se almacena la información correspondiente en las estructuras adecuadas. La función parseFile es responsable de asignar memoria dinámica a medida que se encuentran nuevos objetos y consultas en el archivo.
+
+En el archivo modelokepler.c, se encuentra la función principal main y la función simulateKepler. La función simulateKepler utiliza los datos almacenados en las estructuras ObjectDescription y Query para simular el movimiento de los objetos en el sistema solar. En primer lugar, se abre un archivo llamado "respuestas.txt" donde se escribirán los resultados de las consultas. Luego, se recorren todas las consultas y se realiza el cálculo de las coordenadas (X, Y) del objeto consultado en el tiempo especificado. Para ello, se utilizan los principios del modelo de Kepler, que describe las órbitas planetarias. Se calcula la excentricidad, el semieje mayor, la posición radial, la anomalía verdadera y finalmente las coordenadas X e Y. Los resultados se escriben en el archivo "respuestas.txt" junto con la información de la consulta correspondiente.
+
+En la función main, se llama a la función parseFile para procesar el archivo de configuración y obtener los objetos y consultas. Luego, se invoca la función simulateKepler, pasando los datos obtenidos. Después de la simulación, se libera la memoria dinámica asignada a las estructuras objects y queries.
+
+En resumen, el programa utiliza las estructuras ObjectDescription y Query para almacenar los datos de los objetos y las consultas del sistema solar respectivamente. Utiliza el archivo de configuración como entrada y realiza cálculos basados en el modelo de Kepler para simular las órbitas planetarias y responder a las consultas especificadas.
 
 ## Diseño general
-El programa se divide en las siguientes partes:
+Archivo "structures.h"
+El archivo "structures.h" es un archivo de encabezado que define dos estructuras de datos: "ObjectDescription" y "Query". Estas estructuras se utilizan para almacenar información sobre objetos astronómicos y consultas relacionadas con ellos.
 
-1. [Parte 1]: [Descripción de la parte 1 y cómo fue programada].
-2. [Parte 2]: [Descripción de la parte 2 y cómo fue programada].
-3. [Parte 3]: [Descripción de la parte 3 y cómo fue programada].
+La estructura "ObjectDescription" tiene los siguientes campos:
+
+objectID: una cadena de caracteres que representa el identificador único del objeto (máximo 50 caracteres).
+mass: un número de punto flotante que representa la masa del objeto.
+perihelionX y perihelionY: números de punto flotante que representan las coordenadas X e Y del perihelio del objeto.
+aphelionX y aphelionY: números de punto flotante que representan las coordenadas X e Y del afelio del objeto.
+initialPosX y initialPosY: números de punto flotante que representan las coordenadas X e Y de la posición inicial del objeto.
+La estructura "Query" tiene los siguientes campos:
+
+queryID: una cadena de caracteres que representa el identificador único de la consulta (máximo 50 caracteres).
+objectID: una cadena de caracteres que representa el identificador único del objeto asociado a la consulta.
+time: un número de punto flotante que representa el tiempo de la consulta.
+Estas estructuras proporcionan una manera estructurada de almacenar la información necesaria para el procesamiento del modelo de Kepler.
+
+Archivo "file_parser.c"
+El archivo "file_parser.c" implementa una función llamada parseFile que se encarga de analizar un archivo de texto y extraer la información de descripción de objetos y consultas. Esta función toma como argumentos el nombre del archivo, punteros a matrices de estructuras ObjectDescription y Query, y punteros a enteros que almacenan la cantidad de objetos y consultas, respectivamente.
+
+La función comienza abriendo el archivo especificado y verificando si se pudo abrir correctamente. Luego, lee el archivo línea por línea y determina si cada línea pertenece a la sección de descripción de objetos o a la sección de consultas. Para realizar esta distinción, utiliza variables de estado (isDescriptionSection e isQuerySection).
+
+Dentro del bucle de lectura de líneas, si se encuentra en la sección de descripción de objetos, se crea una nueva instancia de la estructura ObjectDescription y se asignan los valores correspondientes a sus campos utilizando la función sscanf para analizar la línea leída. A continuación, se incrementa la cantidad de objetos y se realloca la memoria para almacenar la nueva estructura en la matriz objects.
+
+Si se encuentra en la sección de consultas, se realiza un proceso similar para crear una nueva instancia de la estructura Query, analizar la línea y almacenarla en la matriz queries.
+
+Una vez que se han leído todas las líneas del archivo, se cierra el archivo y finaliza la función.
+
+Este archivo es crucial para leer y procesar los datos de entrada necesarios para el modelo de Kepler.
+
+Archivo "modelokepler.c"
+El archivo "modelokepler.c" contiene la función principal main, que coordina el flujo del programa. También incluye la definición de la constante PI.
+
+La función main comienza declarando punteros nulos a matrices de estructuras ObjectDescription y Query, así como variables enteras para almacenar la cantidad de objetos y consultas.
+
+A continuación, se llama a la función parseFile pasando el nombre del archivo, los punteros a las matrices y los punteros a las variables de conteo. Esto permite leer y analizar el archivo de entrada y almacenar los datos en las estructuras correspondientes.
+
+Después de eso, se llama a la función simulateKepler, que recibe las matrices de objetos y consultas, junto con los conteos respectivos. Esta función realiza cálculos relacionados con el modelo de Kepler para cada consulta y escribe los resultados en un archivo llamado "respuestas.txt".
+
+Finalmente, se liberan las memorias asignadas dinámicamente para las matrices de objetos y consultas utilizando la función free.
+
+Este archivo principal es responsable de coordinar la ejecución del programa y realizar los cálculos necesarios según el modelo de Kepler.
 
 ## Principales retos
 Durante el desarrollo de este proyecto, se enfrentaron los siguientes retos:
