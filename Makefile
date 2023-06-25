@@ -1,3 +1,4 @@
+
 CC = gcc
 CFLAGS = -Wall -Wextra -g
 LDFLAGS =
@@ -17,14 +18,14 @@ EXECUTABLE = $(BIN_DIR)/programa
 all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJS) $(MAIN_OBJ)
-	@mkdir -p $(BIN_DIR)
-	$(CC) $(LDFLAGS) $^ -o $@ -lm
+ @mkdir -p $(BIN_DIR)
+ $(CC) $(LDFLAGS) $^ -o $@ -lm
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+ @mkdir -p $(BUILD_DIR)
+ $(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 
 clean:
-	rm -rf $(BUILD_DIR) $(BIN_DIR)
+ rm -rf $(BUILD_DIR) $(BIN_DIR
