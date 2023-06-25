@@ -5,7 +5,8 @@
 #include "../structures.h"
 
 #define PI 3.14159265358979323846
-
+#define G 6.67430e-11
+void parseFile(const char* filename, ObjectDescription** objects, int* numObjects, Query** queries, int* numQueries);
 /**
  * @brief Simula el modelo de Kepler para objetos y consultas dados.
  *
@@ -44,27 +45,21 @@ void simulateKepler(ObjectDescription* objects, int numObjects, Query* queries, 
             continue;
         }
 
-        // Calcular excentricidad
+        // Calcular la excentricidad de la órbita
         double e = sqrt(pow(object.aphelionX - object.perihelionX, 2) + pow(object.aphelionY - object.perihelionY, 2));
 
-        // Calcular semieje mayor
+        // Calcular el semieje mayor de la órbita
         double a = (object.aphelionX - object.perihelionX) / (1 + e);
 
-        // Calcular posición radial
-        double T = 2 * PI * sqrt(pow(a, 3) / object.mass);  // Período orbital
-        double r = a * (1 - pow(e, 2)) / (1 + e * cos((2 * PI * query.time) / T));
+        // Calcular la posición radial en función del tiempo
+        double T = 2 * M_PI * sqrt(pow(a, 3) / G * object.mass); // Calcular el período orbital (usando una constante G adecuada)
+        double r = a * (1 - pow(e, 2)) / (1 + e * cos((2 * M_PI * query.time) / T));
 
-        // Calcular anomalía verdadera
-        double E = (2 * PI * query.time) / T;
-        double error = 1e-8;
-        double prevE = 0.0;
-        while (fabs(E - prevE) > error) {
-            prevE = E;
-            E = E - (E - e * sin(E) - (2 * PI * query.time) / T) / (1 - e * cos(E));
-        }
+        // Calcular la anomalía verdadera
+        double E = 2 * atan(sqrt((1 + e) / (1 - e)) * tan(query.time * PI / T));
         double theta = 2 * atan(sqrt((1 + e) / (1 - e)) * tan(E / 2));
 
-        // Calcular coordenadas X e Y
+        // Calcular las coordenadas X e Y
         double x = r * cos(theta);
         double y = r * sin(theta);
 

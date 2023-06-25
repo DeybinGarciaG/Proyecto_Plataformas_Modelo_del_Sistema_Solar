@@ -1,0 +1,300 @@
+Consulta ID: consulta1
+Objeto ID: objeto17
+Tiempo: 135.01 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta2
+Objeto ID: objeto14
+Tiempo: 437.65 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta3
+Objeto ID: objeto38
+Tiempo: 975.08 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta4
+Objeto ID: objeto21
+Tiempo: 258.39 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta5
+Objeto ID: objeto30
+Tiempo: 758.54 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta6
+Objeto ID: objeto41
+Tiempo: 674.01 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta7
+Objeto ID: objeto8
+Tiempo: 238.75 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta8
+Objeto ID: objeto27
+Tiempo: 19.86 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta9
+Objeto ID: objeto19
+Tiempo: 572.45 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta10
+Objeto ID: objeto24
+Tiempo: 667.83 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta11
+Objeto ID: objeto13
+Tiempo: 387.24 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta12
+Objeto ID: objeto46
+Tiempo: 54.23 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta13
+Objeto ID: objeto19
+Tiempo: 989.27 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta14
+Objeto ID: objeto32
+Tiempo: 869.38 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta15
+Objeto ID: objeto27
+Tiempo: 46.75 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta16
+Objeto ID: objeto10
+Tiempo: 192.32 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta17
+Objeto ID: objeto20
+Tiempo: 208.12 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta18
+Objeto ID: objeto48
+Tiempo: 642.41 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta19
+Objeto ID: objeto36
+Tiempo: 657.63 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta20
+Objeto ID: objeto21
+Tiempo: 420.50 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta21
+Objeto ID: objeto26
+Tiempo: 890.29 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta22
+Objeto ID: objeto37
+Tiempo: 772.96 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta23
+Objeto ID: objeto44
+Tiempo: 626.95 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta24
+Objeto ID: objeto1
+Tiempo: 853.39 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta25
+Objeto ID: objeto8
+Tiempo: 943.93 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta26
+Objeto ID: objeto7
+Tiempo: 679.79 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta27
+Objeto ID: objeto16
+Tiempo: 756.58 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta28
+Objeto ID: objeto50
+Tiempo: 464.49 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta29
+Objeto ID: objeto32
+Tiempo: 16.68 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta30
+Objeto ID: objeto20
+Tiempo: 629.97 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta31
+Objeto ID: objeto38
+Tiempo: 123.20 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta32
+Objeto ID: objeto25
+Tiempo: 33.17 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta33
+Objeto ID: objeto38
+Tiempo: 45.87 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta34
+Objeto ID: objeto26
+Tiempo: 648.47 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta35
+Objeto ID: objeto50
+Tiempo: 929.38 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta36
+Objeto ID: objeto23
+Tiempo: 466.26 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta37
+Objeto ID: objeto19
+Tiempo: 234.00 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta38
+Objeto ID: objeto44
+Tiempo: 953.77 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta39
+Objeto ID: objeto16
+Tiempo: 480.82 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta40
+Objeto ID: objeto36
+Tiempo: 128.86 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta41
+Objeto ID: objeto31
+Tiempo: 169.34 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta42
+Objeto ID: objeto11
+Tiempo: 336.35 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta43
+Objeto ID: objeto39
+Tiempo: 241.76 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta44
+Objeto ID: objeto30
+Tiempo: 233.87 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta45
+Objeto ID: objeto42
+Tiempo: 720.91 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta46
+Objeto ID: objeto21
+Tiempo: 996.56 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta47
+Objeto ID: objeto45
+Tiempo: 855.36 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta48
+Objeto ID: objeto14
+Tiempo: 414.39 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta49
+Objeto ID: objeto2
+Tiempo: 733.92 segundos
+Posición X: nan
+Posición Y: nan
+
+Consulta ID: consulta50
+Objeto ID: objeto6
+Tiempo: 602.95 segundos
+Posición X: nan
+Posición Y: nan
+
